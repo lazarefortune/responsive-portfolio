@@ -11,6 +11,8 @@
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- SWIPER CSS -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- Fonts -->
@@ -76,7 +78,7 @@
 
 
         <!--==================== MAIN ====================-->
-        <ma in class="main">
+        <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 <div class="home__container container grid">
@@ -340,17 +342,352 @@
 
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">My personnal journey</span>
 
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            Work
+                        </div>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!-- Qualification content 1 -->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!-- Qualification 1 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Computer Enginner</h3>
+                                    <span class="qualification__subtitle">Peru - University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2009-2014
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 2 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Web design</h3>
+                                    <span class="qualification__subtitle">Spain - Institute</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2014-2017 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 3 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Web development</h3>
+                                    <span class="qualification__subtitle">Peru - Institue</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2017-2019
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 4 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Master in UI/UX</h3>
+                                    <span class="qualification__subtitle">Peru - Institue</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019-2021
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <!-- Qualification content 2 -->
+                        <div class="qualification__content" data-content id="work" >
+                            <!-- Qualification 1 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Software Enginner</h3>
+                                    <span class="qualification__subtitle">Microsoft - Peru</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2016-2018
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 2 -->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Frontend Developer</h3>
+                                    <span class="qualification__subtitle">Apple Inc - Spain</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2018-2020 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 3 -->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">UI designer</h3>
+                                    <span class="qualification__subtitle">Figma - Spain</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2017-2019
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== SERVICES ====================-->
             <section class="services section" id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">What i offer</span>
                 
+                <div class="services__container container grid">
+                    <!-- Service 1 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-web-grid services__icon"></i>
+                            <h3 class="services__title">UI/UX <br> Designer </h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View more
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">UI/UX <br> Designer </h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-servies grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I develop the user interface.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Web page development.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I create ux element interactions.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I position your company brand .</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-arrow services__icon"></i>
+                            <h3 class="services__title">Frontend <br> Developer </h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View more
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Frontend <br> Developer </h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-servies grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I develop the user interface.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Web page development.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I create ux element interactions.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I position your company brand .</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-pen services__icon"></i>
+                            <h3 class="services__title">Branding <br> Designer </h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View more
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Branding <br> Designer  </h4>
+                                <i class="uil uil-times services__modal-close"></i>
+
+                                <ul class="services__modal-servies grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I develop the user interface.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>Web page development.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I create ux element interactions.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>I position your company brand .</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
-                
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">Most recent work</span>
+
+                <div class="portfolio__container container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Portfolio 1 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio/web-creation.png" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Modern website</h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quisquam, quidem.
+                                </p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio 2 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio/julie-portfolio.png" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Julie Mvie</h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quisquam, quidem.
+                                </p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio 3 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio/web-creation-boutique.png" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Online store</h3>
+                                <p class="portfolio__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Quisquam, quidem.
+                                </p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Swiper Arrows -->
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+                    
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination"></div>
+                    
+                </div>
             </section>
 
             <!--==================== PROJECT IN MIND ====================-->
@@ -381,7 +718,9 @@
         <script src=""></script>
 
 
-        <!-- JS -->
+        <!-- SWIPPER JS -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- MAIN JS -->
         <script src="assets/js/script.js"></script>
     </body>
 </html>
