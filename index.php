@@ -35,7 +35,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">
+                            <a href="#home" class="nav__link active-link">
                                 <i class="uil uil-estate nav__icon"></i> Home
                             </a>
                         </li>
@@ -804,7 +804,9 @@
         </footer>
         
         <!--==================== SCROLL TOP ====================-->
-        
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
 
         <!--==================== SWIPER JS ====================-->
         <script src=""></script>

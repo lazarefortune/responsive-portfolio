@@ -8,7 +8,6 @@ const navMenu = document.getElementById('nav-menu'),
 /* menu show */
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        console.log('click');
         navMenu.classList.add('show-menu');
     });
 }
@@ -112,3 +111,41 @@ let swiper = new Swiper(".portfolio__container", {
         clickable: true,
     },
 });
+
+/* SCROLL SECTIONS ACTIVE LINK */
+const sections = document.querySelectorAll(".section[id]");
+
+function scrollActive() {
+    console.log('scroll');
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50,
+        sectionId = current.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector(".nav__menu a[href*='" + sectionId + "']").classList.add("active-link");
+        } else {
+            document.querySelector(".nav__menu a[href*='" + sectionId + "']").classList.remove("active-link");
+        }
+    });
+}
+window.addEventListener("scroll", scrollActive);
+
+/* CHANGE BACKGROUND HEADER */
+function scrollHeader() {
+    const nav = document.getElementById("header");
+    
+    if(this.scrollY >= 80) nav.classList.add("scroll__header"); else nav.classList.remove("scroll__header");
+}
+window.addEventListener("scroll", scrollHeader);
+
+/* SHOW SCROLL TOP */
+
+function scrollUp() {
+    const scrollUp = document.getElementById("scroll-up");
+ 
+    if(this.scrollY >= 560) scrollUp.classList.add("show-scroll"); else scrollUp.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollUp);
