@@ -69,6 +69,9 @@
                 </div>
 
                 <div class="nav__btns">
+                    <!-- Theme change button  -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    <!-- Menu button -->
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
