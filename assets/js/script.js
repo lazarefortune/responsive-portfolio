@@ -116,7 +116,6 @@ let swiper = new Swiper(".portfolio__container", {
 const sections = document.querySelectorAll(".section[id]");
 
 function scrollActive() {
-    console.log('scroll');
     const scrollY = window.pageYOffset;
 
     sections.forEach(current => {

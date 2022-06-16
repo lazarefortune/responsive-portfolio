@@ -1,4 +1,4 @@
-<!Doctype>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -49,11 +49,11 @@
                                 <i class="uil uil-file-alt nav__icon"></i> Skills
                             </a>
                         </li>
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#services" class="nav__link">
                                 <i class="uil uil-briefcase-alt nav__icon"></i> Services
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav__item">
                             <a href="#portfolio" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i> Portfolio
@@ -61,7 +61,7 @@
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contact Me
+                                <i class="uil uil-message nav__icon"></i> Contact
                             </a>
                         </li>
                     </ul>
@@ -496,12 +496,12 @@
             </section>
 
             <!--==================== SERVICES ====================-->
+            <!--
             <section class="services section" id="services">
                 <h2 class="section__title">Services</h2>
                 <span class="section__subtitle">What i offer</span>
                 
                 <div class="services__container container grid">
-                    <!-- Service 1 -->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-web-grid services__icon"></i>
@@ -540,7 +540,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 2 -->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-arrow services__icon"></i>
@@ -579,7 +578,6 @@
                         </div>
                     </div>
 
-                    <!-- Service 3 -->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-pen services__icon"></i>
@@ -619,6 +617,7 @@
                     </div>
                 </div>
             </section>
+            -->
 
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
@@ -693,6 +692,22 @@
                 </div>
             </section>
 
+            <!--==================== Hobbies ====================-->
+            <section class="hobbies section" >
+                <h2 class="section__title">My YouTube channel</h2>
+                <span class="section__subtitle">
+                    Check out my YouTube channel, I like to share my knowledge.
+                </span>
+
+                <div class="hobbies__container container" style="display: flex; justify-content: center">
+                    <iframe width="560" height="315"
+                             src="https://www.youtube.com/embed/videoseries?list=PLDZiR055I-4zDBQX2aEgIp85gTg74mubN"
+                             title="YouTube video player" frameborder="0"
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                             allowfullscreen></iframe>
+                </div>
+            </section>
+            
             <!--==================== PROJECT IN MIND ====================-->
             <!-- <section class="project section">
 
@@ -713,19 +728,19 @@
                         <div class="contact__information">
                             <i class="uil uil-phone contact__icon"></i>
                             
-                            <div>
+                            <a href="tel:+33661434799">
                                 <h3 class="contact__title">Call Me</h3>
                                 <span class="contact__subtitle">+33 6 61 43 47 99</span>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="contact__information">
                             <i class="uil uil-envelope contact__icon"></i>
                             
-                            <div>
+                            <a href="mailto:lazarefortune@gmail.com">
                                 <h3 class="contact__title">Email</h3>
                                 <span class="contact__subtitle">lazarefortune@gmail.com</span>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="contact__information">
@@ -736,34 +751,33 @@
                                 <span class="contact__subtitle">11 Av. Auguste Rodin 94350 Villiers-sur-marne</span>
                             </div>
                         </div>
-
-                        <form action="" method="post" class="contact__form grid">
-                            <div class="contact__inputs grid">
-                                <div class="contact__content">
-                                    <label for="" class="contact__label">Name</label>
-                                    <input type="text" name="" id="" class="contact__input">
-                                </div>
-                                <div class="contact__content">
-                                    <label for="" class="contact__label">Email</label>
-                                    <input type="email" name="" id="" class="contact__input">
-                                </div>
-                            </div>
+                    </div>
+                    <form action="" method="post" class="contact__form grid">
+                        <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Project</label>
+                                <label for="" class="contact__label">Name</label>
                                 <input type="text" name="" id="" class="contact__input">
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Message</label>
-                                <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" name="" id="" class="contact__input">
                             </div>
-                            <div>
-                                <a href="" class="button button--flex">
-                                    Send Message
-                                    <i class="uil uil-message button__icon"> </i>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Object</label>
+                            <input type="text" name="" id="" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        <div>
+                            <a href="" class="button button--flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"> </i>
+                            </a>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
@@ -785,7 +799,7 @@
                             <a href="#portfolio" class="footer__link">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#contact" class="footer__link">Contact me</a>
+                            <a href="#contact" class="footer__link">Contact</a>
                         </li>
                     </ul>
 
@@ -812,10 +826,6 @@
         </a>
 
         <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
-
-
-        <!-- SWIPPER JS -->
         <script src="assets/js/swiper-bundle.min.js"></script>
         <!-- MAIN JS -->
         <script src="assets/js/script.js"></script>
