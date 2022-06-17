@@ -478,7 +478,8 @@ img {
 .skills__titles{
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--mb-0-5);
+  align-items: center;
+  /* margin-bottom: var(--mb-0-5); */
 }
 
 .skills__name{
@@ -629,6 +630,16 @@ img {
 
 .qualification__button.qualification__active{
   color: var(--first-color);
+}
+
+/* link style */
+.qualification__link{
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  color: var(--first-color);
+}
+.qualification__link:hover{
+  text-decoration: underline;
 }
 
 /*==================== SERVICES ====================*/
@@ -787,6 +798,11 @@ img {
 .swiper-button-next,
 .swiper-pagination-bullet{
   outline: none;
+}
+/*==================== HOBBIES ====================*/
+.hobbies__container{
+  display: flex;
+  justify-content: center;
 }
 /*==================== PROJECT IN MIND ====================*/
 
@@ -1172,6 +1188,9 @@ img {
   }
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
+  }
+  .home__social-icon{
+    font-size: 2rem;
   }
 }
 

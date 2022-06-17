@@ -25,12 +25,14 @@
         <link rel="manifest" href="assets/img/favicons/site.webmanifest">
         <!-- UNICONS -->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <!-- DEVICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     </head>
     <body>
         <!-- Header -->  
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Fortune</a>
+                <a href="#" class="nav__logo">Lazare Fortune</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -87,14 +89,14 @@
                 <div class="home__container container grid">
                     <div class="home__content grid">
                         <div class="home__social">
-                            <a href="" target="_blank" class="home__social-icon">
+                            <a href="https://github.com/lazarefortune" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lazare-fortune/" target="_blank" class="home__social-icon">
                                 <i class="uil uil-linkedin-alt"></i>
                             </a>
-                            <a href="" target="_blank" class="home__social-icon">
-                                <i class="uil uil-dribbble"></i>
-                            </a>
-                            <a href="" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
+                            <a href="https://twitter.com/lazarefortune" target="_blank" class="home__social-icon">
+                                <i class="uil uil-twitter-alt"></i>
                             </a>
                         </div>
 
@@ -113,8 +115,9 @@
                         <div class="home__data">
                             <h1 class="home__title">Hi, I'am Lazare Fortune</h1>
                             <h3 class="home__subtitle">Backend Web Developer</h3>
-                            <p class="home__description"> Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Eveniet assumenda minus, odio dolores 
+                            <p class="home__description">
+                                I have a passion for creating web applications and 
+                                I'm always looking for new challenges to learn and grow.
                             </p>
                             <a href="#contact" class="button button--flex">
                                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -142,24 +145,24 @@
 
                     <div class="about__data">
                         <p class="about__description">
-                            Web Developer with a passion for building beautiful and functional websites.
-                            I have a strong background in web development and have a strong passion for
+                            Junior Web Developer with a passion for building beautiful and functional websites.
+                            I have a background in web development and have a strong passion for
                             learning new technologies.
                         </p>
 
                         <div class="about__info">
                             <div>
-                                <span class="about__info-title">08+</span>
+                                <span class="about__info-title">3</span>
                                 <span class="about__info-name">Years <br> experience </span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">20+</span>
+                                <span class="about__info-title">4</span>
                                 <span class="about__info-name">Completed <br> project </span>
                             </div>
 
                             <div>
-                                <span class="about__info-title">02+</span>
+                                <span class="about__info-title">2</span>
                                 <span class="about__info-name">Companies <br> worked </span>
                             </div>
                         </div>
@@ -183,67 +186,11 @@
                         <!-- Skills 1 -->
                         <div class="skills__content skills__open">
                             <div class="skills__header">
-                                <i class="uil uil-brackets-curly skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__title">Frontend developer</h1>
-                                    <span class="skills__subtitle">More than 4 years</span>
-                                </div>
-
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__css"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">JavaScript</h3> 
-                                        <span class="skills__number">70%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__js"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">React</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__react"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Skills 2 -->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
                                 <i class="uil uil-server-network skills__icon"></i>
 
                                 <div>
                                     <h1 class="skills__title">Backend developer</h1>
-                                    <span class="skills__subtitle">More than 3 years</span>
+                                    <span class="skills__subtitle"> Languages and frameworks </span>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -253,40 +200,107 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">PHP</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__php" ></span>
+                                        <i class="devicon-php-plain skills__icon"></i>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Node Js</h3>
-                                        <span class="skills__number">70%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__node"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Express</h3> 
-                                        <span class="skills__number">50%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__express"></span>
+                                        <h3 class="skills__name">Java</h3>
+                                        <i class="devicon-java-plain skills__icon"></i>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">Python</h3>
-                                        <span class="skills__number">55%</span>
+                                        <i class="devicon-python-plain skills__icon"></i>
                                     </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__python"></span>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Symfony</h3>
+                                        <i class="devicon-symfony-plain skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Node.js</h3>
+                                        <i class="devicon-nodejs-plain skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Express.js</h3>
+                                        <i class="devicon-express-original-wordmark skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Doctrine</h3>
+                                        <i class="devicon-doctrine-plain skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Spring</h3>
+                                        <i class="devicon-spring-plain skills__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills 2 -->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Frontend developer</h1>
+                                    <span class="skills__subtitle">Languages and frameworks</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML 5</h3>
+                                        <i class="uil uil-html5 skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CSS 3</h3>
+                                        <i class="uil uil-css3-simple skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">JavaScript (ES6) </h3>
+                                        <i class="uil uil-java-script skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Bootstrap</h3>
+                                        <i class="devicon-bootstrap-plain skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">React</h3>
+                                        <i class="uil uil-react skills__icon"></i>
                                     </div>
                                 </div>
                             </div>
@@ -300,8 +314,8 @@
                                 <i class="uil uil-swatchbook skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__title">Designer developer</h1>
-                                    <span class="skills__subtitle">More than 2 years</span>
+                                    <h1 class="skills__title">Tools</h1>
+                                    <span class="skills__subtitle"> My other skills </span>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -310,31 +324,29 @@
                             <div class="skills__list grid">
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Figma</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__figma" ></span>
+                                        <h3 class="skills__name">Docker</h3>
+                                        <i class="devicon-docker-plain skills__icon"></i>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Sketch</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__sketch"></span>
+                                        <h3 class="skills__name">Git</h3>
+                                        <i class="devicon-git-plain skills__icon"></i>
                                     </div>
                                 </div>
 
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Photoshop</h3> 
-                                        <span class="skills__number">50%</span>
+                                        <h3 class="skills__name">MySQL</h3>
+                                        <i class="devicon-mysql-plain skills__icon"></i>
                                     </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__photoshop"></span>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">MongoDB</h3>
+                                        <i class="devicon-mongodb-plain skills__icon"></i>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +358,7 @@
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section">
                 <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My personnal journey</span>
+                <span class="section__subtitle">My personal journey</span>
 
                 <div class="qualification__container container">
                     <div class="qualification__tabs">
@@ -366,11 +378,13 @@
                             <!-- Qualification 1 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Computer Enginner</h3>
-                                    <span class="qualification__subtitle">Peru - University</span>
+                                    <h3 class="qualification__title">Bachelor 3 en développement <br>(In progress)</h3>
+                                    <span class="qualification__subtitle">France - 
+                                        <a href="https://www.supdevinci.fr/" class="qualification__link" target="_blank">Sup de vinci</a>
+                                    </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2009-2014
+                                        2021-2022
                                     </div>
                                 </div>
 
@@ -390,11 +404,13 @@
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Web design</h3>
-                                    <span class="qualification__subtitle">Spain - Institute</span>
+                                    <h3 class="qualification__title">DUT Informatique</h3>
+                                    <span class="qualification__subtitle">France - 
+                                        <a href="https://iut-metz.univ-lorraine.fr/" class="qualification__link" target="_blank">IUT de Metz</a>
+                                    </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2014-2017 
+                                        2020-2021
                                     </div>
                                 </div>
                             </div>
@@ -402,11 +418,11 @@
                             <!-- Qualification 3 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Web development</h3>
-                                    <span class="qualification__subtitle">Peru - Institue</span>
+                                    <h3 class="qualification__title">1st year of DUT Informatique</h3>
+                                    <span class="qualification__subtitle">Gabon - I.S.T</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2017-2019
+                                        2018-2019
                                     </div>
                                 </div>
 
@@ -426,11 +442,11 @@
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Master in UI/UX</h3>
-                                    <span class="qualification__subtitle">Peru - Institue</span>
+                                    <h3 class="qualification__title">Math Sup & Math Spé (Preparatory class for high schools)</h3>
+                                    <span class="qualification__subtitle">Gabon - LEON MBA</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2019-2021
+                                        2016-2018
                                     </div>
                                 </div>
                             </div>
@@ -441,11 +457,15 @@
                             <!-- Qualification 1 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Software Enginner</h3>
-                                    <span class="qualification__subtitle">Microsoft - Peru</span>
+                                    <h3 class="qualification__title">Full-stack web developer <br> (In progress)</h3>
+                                    <span class="qualification__subtitle"> 
+                                        <a href="https://www.cambium-media.com/solutions/" class="qualification__link" target="_blank">
+                                            Cambium Media Solutions
+                                        </a> - France
+                                    </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2016-2018
+                                        Sep 2021 - Now
                                     </div>
                                 </div>
 
@@ -465,11 +485,15 @@
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Frontend Developer</h3>
-                                    <span class="qualification__subtitle">Apple Inc - Spain</span>
+                                    <h3 class="qualification__title">Full-stack web developer</h3>
+                                    <span class="qualification__subtitle">
+                                        <a href="https://www.cambium-media.com/solutions/" class="qualification__link" target="_blank">
+                                            Cambium Media Solutions
+                                        </a> - France
+                                    </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2018-2020 
+                                        Jun 2021 - Aug 2021
                                     </div>
                                 </div>
                             </div>
@@ -477,18 +501,38 @@
                             <!-- Qualification 3 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">UI designer</h3>
-                                    <span class="qualification__subtitle">Figma - Spain</span>
+                                    <h3 class="qualification__title">CEO Web Creation</h3>
+                                    <span class="qualification__subtitle">
+                                        Web Creation - Gabon
+                                    </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        2017-2019
+                                        Apr 2020 - Jul 2020 
                                     </div>
+                                </div>
+                                
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- Qualification 4 -->
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
                                 </div>
 
                                 <div>
-                                    <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
+                                    <h3 class="qualification__title">Full-stack web developer</h3>
+                                    <span class="qualification__subtitle"><a href="https://naura.solutions/" class="qualification__link" target="_blank">Na'ura solutions</a> - Gabon</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        Dec 2019 - Mar 2020
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -622,22 +666,22 @@
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">Portfolio</h2>
-                <span class="section__subtitle">Most recent work</span>
+                <span class="section__subtitle"> Now you can see my works</span>
 
                 <div class="portfolio__container container swiper">
                     <div class="swiper-wrapper">
                         <!-- Portfolio 1 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio/web-creation.png" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio/nodejs-blog-api.png" alt="API Github page" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Modern website</h3>
+                                <h3 class="portfolio__title">Node JS Blog API</h3>
                                 <p class="portfolio__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quisquam, quidem.
+                                    I was able to set up an API for managing a blog
+                                    as part of a school project.
                                 </p>
-                                <a href="" class="button button--flex button--small portfolio__button">
-                                    Demo
+                                <a href="https://github.com/lazarefortune/supdevinci-projetblog-nodejs-api" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Show
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
@@ -645,15 +689,15 @@
 
                         <!-- Portfolio 2 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio/julie-portfolio.png" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio/julie-portfolio.png" alt="Julie Mvie website" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Julie Mvie</h3>
                                 <p class="portfolio__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quisquam, quidem.
+                                    I set up the portfolio of an artist photographer
+                                    with back office interface management with Laravel.
                                 </p>
-                                <a href="" class="button button--flex button--small portfolio__button">
+                                <a href="https://julie.my-space.fr" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -662,15 +706,51 @@
 
                         <!-- Portfolio 3 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio/web-creation-boutique.png" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio/forum-lazarefortune.png" alt="Forum interface" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Online store</h3>
+                                <h3 class="portfolio__title">Simple forum</h3>
                                 <p class="portfolio__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Quisquam, quidem.
+                                    In my free time, I was able to set up a very lightweight forum using Laravel. 
+                                    Without focusing on the design aspect but rather the back-end.
                                 </p>
-                                <a href="" class="button button--flex button--small portfolio__button">
+                                <a href="https://forum.lazarefortune.com" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio 4 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio/projet-univ-lorraine-interface.png" alt="Login interface" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">School project</h3>
+                                <p class="portfolio__description">
+                                    As part of a graduation project,
+                                    I was able to set up a management interface for tutored projects.
+                                    Especially on the backend part with Symfony. <br>
+                                    Login : <b>roka</b> / password : <b>zsuzsanna</b>
+                                </p>
+                                <a href="https://projets.lazarefortune.com/synthese/public" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio 5 -->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio/my-space-login-page.png" alt="Login interface" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Personnal project</h3>
+                                <p class="portfolio__description">
+                                    My Space is a personnal project I created for my own use.
+                                    And it is a website I made with Symfony.
+                                </p>
+                                <a href="https://my-space.fr/connexion" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -699,7 +779,7 @@
                     Check out my YouTube channel, I like to share my knowledge.
                 </span>
 
-                <div class="hobbies__container container" style="display: flex; justify-content: center">
+                <div class="hobbies__container container">
                     <iframe width="560" height="315"
                              src="https://www.youtube.com/embed/videoseries?list=PLDZiR055I-4zDBQX2aEgIp85gTg74mubN"
                              title="YouTube video player" frameborder="0"
@@ -816,7 +896,7 @@
                     </div>
                 </div>
 
-                <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+                <p class="footer__copy">&#169; LazareFortune. All right reserved</p>
             </div>
         </footer>
         
