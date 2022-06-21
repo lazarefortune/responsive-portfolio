@@ -168,7 +168,7 @@ if( isset($_POST["formSubmit"]) ){
                         </div>
 
                         <div class="home__data">
-                            <h1 class="home__title">Hi, I'am Lazare Fortune</h1>
+                            <h1 class="home__title">Hi, I'm Lazare Fortune</h1>
                             <h3 class="home__subtitle">Backend Web Developer</h3>
                             <p class="home__description">
                                 I have a passion for creating web applications and 
