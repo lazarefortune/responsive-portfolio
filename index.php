@@ -26,7 +26,7 @@ if( isset($_POST["formSubmit"]) ){
 
     // Send mail to admin
     $to = "lazarefortune@gmail.com";
-    $subject = "Message from " . $data["name"];
+    $subject = $data["object"];
     $message = $data["message"];
     $message .= "<br><br>Email: " . $data["email"];
     $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
