@@ -25,13 +25,20 @@ if( isset($_POST["formSubmit"]) ){
     $message .= "<br><br>Email: " . $data["email"];
     $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
     $headers .= "Reply-To: " . $data["email"] . "\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
-    
+
     // Send mail to user
     $to = $data["email"];
     $subject = "Message sent to Lazare Fortune";
     $message = "Hello, your message has been sent. I will answer you as soon as possible.";
-    $headers = "From: Lazare Fortune <service@lazarefortune.com>";
+    $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
+    $headers .= "Reply-To: Lazare Fortune<lazarefortune@gmail.com> \r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= 'X-Mailer: PHP/' . phpversion();
     mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
 
     // Script to alert success message 
