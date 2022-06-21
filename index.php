@@ -1,3 +1,45 @@
+<?php
+include_once "app/models/Tools.php";
+
+if( isset($_POST["formSubmit"]) ){
+    $data = Tools::extractFormData($_POST);
+    $data["name"] = ucfirst($data["name"]);
+    $data["email"] = strtolower($data["email"]);
+    $data["message"] = nl2br($data["message"]);
+    $data["createdAt"] = date("Y-m-d H:i:s");
+
+    // Save data to database
+
+    // Connect to database with mysqli_connect 
+    
+    // Create a query to insert data into database
+
+    // Execute query
+    
+    // Close connection
+
+    // Send mail to admin
+    $to = "lazarefortune@gmail.com";
+    $subject = "Message from " . $data["name"];
+    $message = $data["message"];
+    $message .= "<br><br>Email: " . $data["email"];
+    $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
+    $headers .= "Reply-To: " . $data["email"] . "\r\n";
+    mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
+    
+    // Send mail to user
+    $to = $data["email"];
+    $subject = "Message sent to Lazare Fortune";
+    $message = "Hello, your message has been sent. I will answer you as soon as possible.";
+    $headers = "From: Lazare Fortune <service@lazarefortune.com>";
+    mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
+
+    // Script to alert success message 
+    echo "<script>alert('Message sent successfully');</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -832,30 +874,30 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" method="post" class="contact__form grid">
+                    <form action="" method="post" name="formContact" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" name="" id="" class="contact__input">
+                                <label for="name" class="contact__label">Name</label>
+                                <input type="text" name="name" id="name" class="contact__input" required>
                             </div>
                             <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" name="" id="" class="contact__input">
+                                <label for="email" class="contact__label">Email</label>
+                                <input type="email" name="email" id="email" class="contact__input" required>
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Object</label>
-                            <input type="text" name="" id="" class="contact__input">
-                        </div>
+                            <label for="object" class="contact__label">Object</label>
+                            <input type="text" name="object" id="object" class="contact__input" required>
+                        </div> 
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="message" class="contact__label">Message</label>
+                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
                         </div>
                         <div>
-                            <a href="" class="button button--flex">
+                            <button type="submit" name="formSubmit" class="button button--flex contact__submit">
                                 Send Message
-                                <i class="uil uil-message button__icon"> </i>
-                            </a>
+                                <i class="uil uil-message button__icon"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
