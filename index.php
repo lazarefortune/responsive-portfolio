@@ -1,8 +1,14 @@
 <?php
-include_once "app/models/Tools.php";
+
+function extractFormData($formData) {
+    $formData = array_map('trim', $formData);
+    $formData = array_map('stripslashes', $formData);
+    $formData = array_map('htmlspecialchars', $formData);
+    return $formData;
+}
 
 if( isset($_POST["formSubmit"]) ){
-    $data = Tools::extractFormData($_POST);
+    $data = extractFormData($_POST);
     $data["name"] = ucfirst($data["name"]);
     $data["email"] = strtolower($data["email"]);
     $data["message"] = nl2br($data["message"]);
