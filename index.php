@@ -939,13 +939,13 @@ if( isset($_POST["formSubmit"]) ){
                     </ul>
 
                     <div class="footer__socials">
-                        <a href="" target="_blank" class="footer__social">
-                            <i class="uil uil-facebook-f"></i>
+                        <a href="https://github.com/lazarefortune" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
                         </a>
-                        <a href="" target="_blank" class="footer__social">
-                            <i class="uil uil-instagram"></i>
+                        <a href="https://www.linkedin.com/in/lazare-fortune/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="" target="_blank" class="footer__social">
+                        <a href="https://www.twitter.com/lazarefortune" target="_blank" class="footer__social">
                             <i class="uil uil-twitter-alt"></i>
                         </a>
                     </div>
