@@ -7,48 +7,69 @@ function extractFormData($formData) {
     return $formData;
 }
 
+$errors = array();
+$messages = array();
+$recaptchaSecret = "6LfVnskZAAAAAN9EyesmLRdO5HUWvFgx-bsbi6AT";
+$url = "https://www.google.com/recaptcha/api/siteverify". "?secret=" . $recaptchaSecret;
+
 if( isset($_POST["formSubmit"]) ){
     $data = extractFormData($_POST);
-    $data["name"] = ucfirst($data["name"]);
-    $data["email"] = strtolower($data["email"]);
-    $data["message"] = nl2br($data["message"]);
-    $data["createdAt"] = date("Y-m-d H:i:s");
+    if ( $data["g-recaptcha-response"] != "" ) {
+        $url .= "&response=" . $data["g-recaptcha-response"];
+        $response = file_get_contents($url);
+        $response = json_decode($response);
+        if ( $response->success ) {
+            $data["g-captcha-response"];
+            $data["name"] = ucfirst($data["name"]);
+            $data["email"] = strtolower($data["email"]);
+            $data["message"] = nl2br($data["message"]);
+            $data["createdAt"] = date("Y-m-d H:i:s");
 
-    // Save data to database
+            // Save data to database
 
-    // Connect to database with mysqli_connect 
-    
-    // Create a query to insert data into database
+            // Connect to database with mysqli_connect 
+            
+            // Create a query to insert data into database
 
-    // Execute query
-    
-    // Close connection
+            // Execute query
+            
+            // Close connection
 
-    // Send mail to admin
-    $to = "lazarefortune@gmail.com";
-    $subject = $data["object"];
-    $message = $data["message"];
-    $message .= "<br><br>Email: " . $data["email"];
-    $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
-    $headers .= "Reply-To: " . $data["email"] . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-    $headers .= 'X-Mailer: PHP/' . phpversion();
-    mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
+            // Send mail to admin
+            $to = "lazarefortune@gmail.com";
+            $subject = $data["object"];
+            $message = $data["message"];
+            $message .= "<br><br>Email: " . $data["email"];
+            $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
+            $headers .= "Reply-To: " . $data["email"] . "\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+            $headers .= 'X-Mailer: PHP/' . phpversion();
+            mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
 
-    // Send mail to user
-    $to = $data["email"];
-    $subject = "Message sent to Lazare Fortune";
-    $message = "Hello, your message has been sent. I will answer you as soon as possible.";
-    $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
-    $headers .= "Reply-To: Lazare Fortune<lazarefortune@gmail.com> \r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-    $headers .= 'X-Mailer: PHP/' . phpversion();
-    mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
+            // Send mail to user
+            $to = $data["email"];
+            $subject = "Message sent to Lazare Fortune";
+            $message = "Hello, your message has been sent. I will answer you as soon as possible.";
+            $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
+            $headers .= "Reply-To: Lazare Fortune<lazarefortune@gmail.com> \r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+            $headers .= 'X-Mailer: PHP/' . phpversion();
+            mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
+            $messages["sendmail"] = "Your message has been sent. I will answer you as soon as possible.";
+            // Script to alert success message 
+            echo "<script>alert('Message sent successfully');</script>";
+        } else {
+            $errors["recaptcha"] = "Please check the captcha";
+        }
+    } else {
+        $errors["recaptcha"] = "Please check the box 'I'm not a robot'";
+    }
+}
 
-    // Script to alert success message 
-    echo "<script>alert('Message sent successfully');</script>";
+if( count($errors) > 0 ){
+    $oldData = $data;
 }
 
 ?>
@@ -82,6 +103,8 @@ if( isset($_POST["formSubmit"]) ){
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <!-- DEVICONS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <!-- Google reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <!-- Header -->  
@@ -888,24 +911,37 @@ if( isset($_POST["formSubmit"]) ){
                         </div>
                     </div>
                     <form action="" method="post" name="formContact" class="contact__form grid">
+                        <?php if(isset($errors) && !empty($errors)): ?>
+                        <div class="contact__error">
+                            <?php foreach($errors as $error): ?>
+                                <p class="contact__error-message"><i class="uil uil-exclamation-triangle"></i> <?= $error ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
+                        <?php if(isset($messages) && !empty($messages["sendmail"])): ?>
+                        <div class="contact__success">
+                            <p class="contact__success-message"><i class="uil uil-check-circle"></i> <?= $messages["sendmail"] ?></p>
+                        </div>
+                        <?php endif; ?>
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="name" class="contact__label">Name</label>
-                                <input type="text" name="name" id="name" class="contact__input" required>
+                                <input type="text" name="name" id="name" class="contact__input" required value="<?php if(isset($oldData['name'])) echo $oldData['name']; ?>">
                             </div>
                             <div class="contact__content">
                                 <label for="email" class="contact__label">Email</label>
-                                <input type="email" name="email" id="email" class="contact__input" required>
+                                <input type="email" name="email" id="email" class="contact__input" required value="<?php if(isset($oldData['email'])) echo $oldData['email']; ?>">
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="object" class="contact__label">Object</label>
-                            <input type="text" name="object" id="object" class="contact__input" required>
+                            <input type="text" name="object" id="object" class="contact__input" required value="<?php if(isset($oldData['object'])) echo $oldData['object']; ?>">
                         </div> 
                         <div class="contact__content">
                             <label for="message" class="contact__label">Message</label>
-                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
+                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required><?php if(isset($oldData['message'])) echo $oldData['message']; ?></textarea>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6LfVnskZAAAAAKWJwcbJ5xbYpXXGoikjAhxOg0p_"></div>                        
                         <div>
                             <button type="submit" name="formSubmit" class="button button--flex contact__submit">
                                 Send Message

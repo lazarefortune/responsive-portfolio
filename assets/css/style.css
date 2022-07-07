@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 220; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -22,6 +22,10 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --error-background-color: rgb(207, 33, 33);
+    --error-color: hsl(var(--hue-color), 100%, 100%);
+    --success-background-color: rgb(34, 177, 34);
+    --success-color: #fff;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -860,6 +864,32 @@ img {
 
 .contact__submit{
   border: none;
+}
+
+.contact__error{
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: var(--error-background-color);
+  font-size: var(--small-font-size);
+  text-align: left;
+  align-items: center;
+}
+
+.contact__error-message{
+  color: var(--error-color);
+}
+
+.contact__success{
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: var(--success-background-color);
+  font-size: var(--small-font-size);
+  text-align: left;
+  align-items: center;
+}
+
+.contact__success-message{
+  color: var(--success-color);
 }
 
 /*==================== FOOTER ====================*/
