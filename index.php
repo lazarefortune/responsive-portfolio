@@ -75,7 +75,7 @@ if( count($errors) > 0 ){
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Lazare Fortune</title>
@@ -860,7 +860,7 @@ if( count($errors) > 0 ){
                 <div class="hobbies__container container">
                     <iframe width="560" height="315"
                              src="https://www.youtube.com/embed/videoseries?list=PLDZiR055I-4zDBQX2aEgIp85gTg74mubN"
-                             title="YouTube video player" frameborder="0"
+                             title="YouTube video player"
                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                              allowfullscreen></iframe>
                 </div>
@@ -910,7 +910,7 @@ if( count($errors) > 0 ){
                             </div>
                         </div>
                     </div>
-                    <form action="" method="post" name="formContact" class="contact__form grid">
+                    <form method="post" name="formContact" class="contact__form grid">
                         <?php if(isset($errors) && !empty($errors)): ?>
                         <div class="contact__error">
                             <?php foreach($errors as $error): ?>
@@ -939,7 +939,7 @@ if( count($errors) > 0 ){
                         </div> 
                         <div class="contact__content">
                             <label for="message" class="contact__label">Message</label>
-                            <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required><?php if(isset($oldData['message'])) echo $oldData['message']; ?></textarea>
+                            <textarea name="message" id="message" cols="5" rows="7" class="contact__input" required><?php if(isset($oldData['message'])) echo $oldData['message']; ?></textarea>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6LfVnskZAAAAAKWJwcbJ5xbYpXXGoikjAhxOg0p_"></div>                        
                         <div>
