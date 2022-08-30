@@ -105,6 +105,8 @@ if( count($errors) > 0 ){
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <!-- Google reCAPTCHA -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
     </head>
     <body>
         <!-- Header -->  
@@ -300,6 +302,13 @@ if( count($errors) > 0 ){
                                     <div class="skills__titles">
                                         <h3 class="skills__name">Symfony</h3>
                                         <i class="devicon-symfony-plain skills__icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Laravel</h3>
+                                        <i class="devicon-laravel-plain skills__icon"></i>
                                     </div>
                                 </div>
 
@@ -996,8 +1005,6 @@ if( count($errors) > 0 ){
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
         <!-- MAIN JS -->
         <script src="assets/js/script.js"></script>
     </body>
