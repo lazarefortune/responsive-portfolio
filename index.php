@@ -49,7 +49,7 @@ if( isset($_POST["formSubmit"]) ){
 
             // Send mail to user
             $to = $data["email"];
-            $subject = "Message sent to Lazare Fortune";
+            $subject = "Merci pour votre message";
             $message = "Bonjour ". $data['name'] .", <br><br>";
             $message .= "Votre message a bien été envoyé. <br>";
             $message .= "Je vous répondrai dans les plus brefs délais. <br><br>";
@@ -61,9 +61,9 @@ if( isset($_POST["formSubmit"]) ){
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
             $headers .= 'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $message, $headers, "-fservice@lazarefortune.com");
-            $messages["sendmail"] = "Your message has been sent. I will answer you as soon as possible.";
+            $messages["sendmail"] = "Votre message a été envoyé. Je vous répondrai dès que possible.";
             // Script to alert success message 
-            echo "<script>alert('Message sent successfully');</script>";
+            echo "<script>alert('Message envoyé avec succès');</script>";
         } else {
             $errors["recaptcha"] = "Please check the captcha";
         }
