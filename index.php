@@ -50,7 +50,11 @@ if( isset($_POST["formSubmit"]) ){
             // Send mail to user
             $to = $data["email"];
             $subject = "Message sent to Lazare Fortune";
-            $message = "Hello, your message has been sent. I will answer you as soon as possible.";
+            $message = "Bonjour ". $data['name'] .", <br><br>";
+            $message .= "Votre message a bien été envoyé. <br>";
+            $message .= "Je vous répondrai dans les plus brefs délais. <br><br>";
+            $message .= "Cordialement, <br>";
+            $message .= "Lazare Fortune";
             $headers = "From: Lazare Fortune <service@lazarefortune.com>\r\n";
             $headers .= "Reply-To: Lazare Fortune<lazarefortune@gmail.com> \r\n";
             $headers .= "MIME-Version: 1.0\r\n";
