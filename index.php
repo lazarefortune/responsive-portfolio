@@ -1,10 +1,10 @@
 <?php
 
-function extractFormData($formData) {
+function extractFormData($formData): array
+{
     $formData = array_map('trim', $formData);
     $formData = array_map('stripslashes', $formData);
-    $formData = array_map('htmlspecialchars', $formData);
-    return $formData;
+    return array_map('htmlspecialchars', $formData);
 }
 
 $errors = array();
@@ -112,23 +112,23 @@ if( count($errors) > 0 ){
         <!-- Header -->  
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Lazare Fortune</a>
+                <a href="" class="nav__logo">Lazare Fortune</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
                             <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
+                                <i class="uil uil-estate nav__icon"></i> Accueil
                             </a>
                         </li>
                         <li class="nav__item">
                             <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
+                                <i class="uil uil-user nav__icon"></i> A propos
                             </a>
                         </li>
                         <li class="nav__item">
                             <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Skills
+                                <i class="uil uil-file-alt nav__icon"></i> Compétences
                             </a>
                         </li>
                         <!-- <li class="nav__item">
@@ -193,14 +193,13 @@ if( count($errors) > 0 ){
                         </div>
 
                         <div class="home__data">
-                            <h1 class="home__title">Hi, I'm Lazare Fortune</h1>
-                            <h3 class="home__subtitle">Backend Web Developer</h3>
+                            <h1 class="home__title">Salut, je suis Lazare Fortune</h1>
+                            <h3 class="home__subtitle">Développeur web PHP</h3>
                             <p class="home__description">
-                                I have a passion for creating web applications and 
-                                I'm always looking for new challenges to learn and grow.
+                                J'ai une passion pour la création d'applications web et je suis toujours à la recherche de nouveaux défis pour apprendre et progresser.
                             </p>
                             <a href="#contact" class="button button--flex">
-                                Contact Me <i class="uil uil-message button__icon"></i>
+                                Me contacter <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
                     </div>
@@ -208,7 +207,7 @@ if( count($errors) > 0 ){
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-button button--flex">
                             <i class="uil uil-mouse-alt home__scroll-mouse" ></i>
-                            <span class="home__scroll-name">Scroll down</span>
+                            <span class="home__scroll-name">En savoir plus</span>
                             <i class="uil uil-arrow-down home__scroll-arrow"></i>
                         </a>
                     </div>
@@ -217,39 +216,39 @@ if( count($errors) > 0 ){
 
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My introduction</span>
+                <h2 class="section__title">A propos</h2>
+                <span class="section__subtitle">Mon parcours</span>
 
                 <div class="about__container container grid">
                     <img src="assets/img/lazarefortune.jpeg" alt="" class="about__img">
 
                     <div class="about__data">
                         <p class="about__description">
-                            Junior Web Developer with a passion for building beautiful and functional websites.
-                            I have a background in web development and have a strong passion for
-                            learning new technologies.
+                            Développeur Web junior avec une passion pour la création de sites Web beaux et fonctionnels.
+                            J'ai une formation en développement web et
+                            j'ai une forte passion pour l'apprentissage des nouvelles technologies.
                         </p>
 
                         <div class="about__info">
                             <div>
                                 <span class="about__info-title">3</span>
-                                <span class="about__info-name">Years <br> experience </span>
+                                <span class="about__info-name">Ans <br> d'expérience </span>
                             </div>
 
                             <div>
                                 <span class="about__info-title">4</span>
-                                <span class="about__info-name">Completed <br> project </span>
+                                <span class="about__info-name">Projets <br> achevés </span>
                             </div>
 
                             <div>
                                 <span class="about__info-title">2</span>
-                                <span class="about__info-name">Companies <br> worked </span>
+                                <span class="about__info-name">  </span>
                             </div>
                         </div>
 
                         <div class="about__buttons test" id="abo">
                             <a href="assets/pdf/CV_Fortune_KOMBILA.pdf" download="CV_Fortune_KOMBILA" class="button button--flex">
-                                Download CV <i class="uil uil-download-alt button__icon"></i> 
+                                Télécharger mon CV <i class="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
                     </div>
@@ -258,8 +257,8 @@ if( count($errors) > 0 ){
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My technical level</span>
+                <h2 class="section__title">Compétences</h2>
+                <span class="section__subtitle">Parlons technologies maintenant</span>
 
                 <div class="skills__container container grid">
                     <div>
@@ -269,8 +268,8 @@ if( count($errors) > 0 ){
                                 <i class="uil uil-server-network skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__title">Backend developer</h1>
-                                    <span class="skills__subtitle"> Languages and frameworks </span>
+                                    <h1 class="skills__title">Backend</h1>
+                                    <span class="skills__subtitle"> Langages et frameworks </span>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -348,8 +347,8 @@ if( count($errors) > 0 ){
                                 <i class="uil uil-brackets-curly skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__title">Frontend developer</h1>
-                                    <span class="skills__subtitle">Languages and frameworks</span>
+                                    <h1 class="skills__title">Frontend</h1>
+                                    <span class="skills__subtitle">Langages et frameworks</span>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -401,8 +400,8 @@ if( count($errors) > 0 ){
                                 <i class="uil uil-swatchbook skills__icon"></i>
 
                                 <div>
-                                    <h1 class="skills__title">Tools</h1>
-                                    <span class="skills__subtitle"> My other skills </span>
+                                    <h1 class="skills__title">Outils</h1>
+                                    <span class="skills__subtitle"> Mes autres compétences </span>
                                 </div>
 
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -444,28 +443,46 @@ if( count($errors) > 0 ){
 
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My personal journey</span>
+                <h2 class="section__title">Parcours</h2>
+                <span class="section__subtitle">Mon parcours personnel</span>
 
                 <div class="qualification__container container">
                     <div class="qualification__tabs">
                         <div class="qualification__button button--flex qualification__active" data-target="#education">
                             <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Education
+                            Scolaire
                         </div>
                         <div class="qualification__button button--flex" data-target="#work">
                             <i class="uil uil-briefcase-alt qualification__icon"></i>
-                            Work
+                            Professionnel
                         </div>
                     </div>
 
                     <div class="qualification__sections">
                         <!-- Qualification content 1 -->
                         <div class="qualification__content qualification__active" data-content id="education">
+                            <div class="qualification__data">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Master en développement</h3>
+                                    <span class="qualification__subtitle">France -
+                                        <a href="https://www.supdevinci.fr/" class="qualification__link" target="_blank">Sup de vinci</a>
+                                    </span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2022-2024
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Qualification 1 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Bachelor 3 en développement <br>(In progress)</h3>
+                                    <h3 class="qualification__title">Bachelor 3 en développement</h3>
                                     <span class="qualification__subtitle">France - 
                                         <a href="https://www.supdevinci.fr/" class="qualification__link" target="_blank">Sup de vinci</a>
                                     </span>
@@ -505,7 +522,7 @@ if( count($errors) > 0 ){
                             <!-- Qualification 3 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">1st year of DUT Informatique</h3>
+                                    <h3 class="qualification__title">1ère année de DUT Informatique</h3>
                                     <span class="qualification__subtitle">Gabon - I.S.T</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -529,7 +546,7 @@ if( count($errors) > 0 ){
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Math Sup & Math Spé (Preparatory class for high schools)</h3>
+                                    <h3 class="qualification__title">Math Sup & Math Spé - CPGE (Classe préparatoire aux grandes écoles)</h3>
                                     <span class="qualification__subtitle">Gabon - LEON MBA</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -544,7 +561,7 @@ if( count($errors) > 0 ){
                             <!-- Qualification 1 -->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">Full-stack web developer <br> (In progress)</h3>
+                                    <h3 class="qualification__title">Développeur full-stack<br> (En cours)</h3>
                                     <span class="qualification__subtitle"> 
                                         <a href="https://www.cambium-media.com/solutions/" class="qualification__link" target="_blank">
                                             Cambium Media Solutions
@@ -552,7 +569,7 @@ if( count($errors) > 0 ){
                                     </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Sep 2021 - Now
+                                        Depuis Sept. 2021
                                     </div>
                                 </div>
 
@@ -572,7 +589,7 @@ if( count($errors) > 0 ){
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Full-stack web developer</h3>
+                                    <h3 class="qualification__title">Stagiaire développeur full-stack</h3>
                                     <span class="qualification__subtitle">
                                         <a href="https://www.cambium-media.com/solutions/" class="qualification__link" target="_blank">
                                             Cambium Media Solutions
@@ -580,7 +597,7 @@ if( count($errors) > 0 ){
                                     </span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Jun 2021 - Aug 2021
+                                        Juin 2021 - Août 2021
                                     </div>
                                 </div>
                             </div>
@@ -612,7 +629,7 @@ if( count($errors) > 0 ){
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">Full-stack web developer</h3>
+                                    <h3 class="qualification__title">Développeur full-stack</h3>
                                     <span class="qualification__subtitle"><a href="https://naura.solutions/" class="qualification__link" target="_blank">Na'ura solutions</a> - Gabon</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -753,7 +770,7 @@ if( count($errors) > 0 ){
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">Portfolio</h2>
-                <span class="section__subtitle"> Now you can see my works</span>
+                <span class="section__subtitle"> Découvrons mes réalisations </span>
 
                 <div class="portfolio__container container swiper">
                     <div class="swiper-wrapper">
@@ -762,13 +779,13 @@ if( count($errors) > 0 ){
                             <img src="assets/img/portfolio/nodejs-blog-api.png" alt="API Github page" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Node JS Blog API</h3>
+                                <h3 class="portfolio__title">API d'un blog en Node.js</h3>
                                 <p class="portfolio__description">
-                                    I was able to set up an API for managing a blog
-                                    as part of a school project.
+                                    J'ai pu mettre en place une API pour gérer un blog
+                                    dans le cadre d'un projet scolaire.
                                 </p>
                                 <a href="https://github.com/lazarefortune/supdevinci-projetblog-nodejs-api" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Show
+                                    Consulter
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
@@ -781,8 +798,8 @@ if( count($errors) > 0 ){
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Julie Mvie</h3>
                                 <p class="portfolio__description">
-                                    I set up the portfolio of an artist photographer
-                                    with back office interface management with Laravel.
+                                    J'ai eu à réaliser le portfolio d'un photographe
+                                    avec une gestion du back office avec Laravel.
                                 </p>
                                 <a href="https://julie.my-space.fr" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
@@ -796,10 +813,10 @@ if( count($errors) > 0 ){
                             <img src="assets/img/portfolio/forum-lazarefortune.png" alt="Forum interface" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Simple forum</h3>
+                                <h3 class="portfolio__title">Forum</h3>
                                 <p class="portfolio__description">
-                                    In my free time, I was able to set up a very lightweight forum using Laravel. 
-                                    Without focusing on the design aspect but rather the back-end.
+                                    Pendant mon temps libre, j'ai pu mettre en place un forum très léger en utilisant Laravel.
+                                    Sans se focaliser sur l'aspect design mais plutôt sur le backend du projet.
                                 </p>
                                 <a href="https://forum.lazarefortune.com" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
@@ -813,12 +830,12 @@ if( count($errors) > 0 ){
                             <img src="assets/img/portfolio/projet-univ-lorraine-interface.png" alt="Login interface" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">School project</h3>
+                                <h3 class="portfolio__title">Projet scolaire</h3>
                                 <p class="portfolio__description">
-                                    As part of a graduation project,
-                                    I was able to set up a management interface for tutored projects.
-                                    Especially on the backend part with Symfony. <br>
-                                    Login : <b>roka</b> / password : <b>zsuzsanna</b>
+                                    Dans le cadre d'un projet de fin d'études,
+                                    J'ai pu mettre en place une interface de gestion de projets tutorés.
+                                    Notamment sur la partie backend avec Symfony. <br>
+                                    Identifiant : <b>roka</b> / mot de passe : <b>zsuzsanna</b>
                                 </p>
                                 <a href="https://projets.lazarefortune.com/synthese/public" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
@@ -832,10 +849,10 @@ if( count($errors) > 0 ){
                             <img src="assets/img/portfolio/my-space-login-page.png" alt="Login interface" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Personnal project</h3>
+                                <h3 class="portfolio__title">Projet personnel</h3>
                                 <p class="portfolio__description">
-                                    My Space is a personnal project I created for my own use.
-                                    And it is a website I made with Symfony.
+                                    My Space est un projet personnel que j'ai créé pour mon propre usage,
+                                    conçu avec Symfony.
                                 </p>
                                 <a href="https://my-space.fr/connexion" target="_blank" class="button button--flex button--small portfolio__button">
                                     Demo
@@ -861,9 +878,9 @@ if( count($errors) > 0 ){
 
             <!--==================== Hobbies ====================-->
             <section class="hobbies section" >
-                <h2 class="section__title">My YouTube channel</h2>
+                <h2 class="section__title">Ma chaîne YouTube</h2>
                 <span class="section__subtitle">
-                    Check out my YouTube channel, I like to share my knowledge.
+                    Consultez ma chaîne YouTube, j'aime partager mes connaissances lors de mon temps libre.
                 </span>
 
                 <div class="hobbies__container container">
@@ -887,19 +904,19 @@ if( count($errors) > 0 ){
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get in touch</span>
+                <h2 class="section__title">Me contacter</h2>
+                <span class="section__subtitle">Vous pouvez utiliser le formulaire ci-dessous pour me contacter</span>
 
                 <div class="contact__container container grid">
                     <div>
-                        <div class="contact__information">
-                            <i class="uil uil-phone contact__icon"></i>
-                            
-                            <a href="tel:+33661434799">
-                                <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">+33 6 61 43 47 99</span>
-                            </a>
-                        </div>
+<!--                        <div class="contact__information">-->
+<!--                            <i class="uil uil-phone contact__icon"></i>-->
+<!--                            -->
+<!--                            <a href="tel:+33661434799">-->
+<!--                                <h3 class="contact__title">Appelez-moi</h3>-->
+<!--                                <span class="contact__subtitle">+33 6 61 43 47 99</span>-->
+<!--                            </a>-->
+<!--                        </div>-->
 
                         <div class="contact__information">
                             <i class="uil uil-envelope contact__icon"></i>
@@ -914,8 +931,8 @@ if( count($errors) > 0 ){
                             <i class="uil uil-map-marker contact__icon"></i>
                             
                             <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">11 Av. Auguste Rodin 94350 Villiers-sur-marne</span>
+                                <h3 class="contact__title">Localisation</h3>
+                                <span class="contact__subtitle">Villiers-sur-marne</span>
                             </div>
                         </div>
                     </div>
@@ -934,7 +951,7 @@ if( count($errors) > 0 ){
                         <?php endif; ?>
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="name" class="contact__label">Name</label>
+                                <label for="name" class="contact__label">Nom</label>
                                 <input type="text" name="name" id="name" class="contact__input" required value="<?php if(isset($oldData['name'])) echo $oldData['name']; ?>">
                             </div>
                             <div class="contact__content">
@@ -943,17 +960,17 @@ if( count($errors) > 0 ){
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="object" class="contact__label">Object</label>
+                            <label for="object" class="contact__label">Objet du message</label>
                             <input type="text" name="object" id="object" class="contact__input" required value="<?php if(isset($oldData['object'])) echo $oldData['object']; ?>">
                         </div> 
                         <div class="contact__content">
-                            <label for="message" class="contact__label">Message</label>
+                            <label for="message" class="contact__label">Entrez votre message</label>
                             <textarea name="message" id="message" cols="5" rows="7" class="contact__input" required><?php if(isset($oldData['message'])) echo $oldData['message']; ?></textarea>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6LfVnskZAAAAAKWJwcbJ5xbYpXXGoikjAhxOg0p_"></div>                        
                         <div>
                             <button type="submit" name="formSubmit" class="button button--flex contact__submit">
-                                Send Message
+                                Envoyer
                                 <i class="uil uil-message button__icon"></i>
                             </button>
                         </div>
@@ -968,12 +985,12 @@ if( count($errors) > 0 ){
                 <div class="footer__container container grid">
                     <div>
                         <h1 class="footer__title">Lazare Fortune</h1>
-                        <span class="footer__subtitle">Backend developer</span>
+                        <span class="footer__subtitle">Développeur web</span>
                     </div>
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#services" class="footer__link">Services</a>
+                            <a href="#about" class="footer__link"></a>
                         </li>
                         <li>
                             <a href="#portfolio" class="footer__link">Portfolio</a>

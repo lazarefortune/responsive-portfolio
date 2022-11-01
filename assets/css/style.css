@@ -197,7 +197,7 @@ img {
 }
 
 .nav__logo:hover{
-    cursor: var(--first-color);
+    cursor: pointer;
 }
 
 .nav__toggle{
