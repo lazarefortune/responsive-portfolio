@@ -68,12 +68,6 @@ if (isset($_POST['uploadBtn']))
             }
         }
 
-        // }
-        // else
-        // {
-        //   $error = 'danger';
-        //   $message = 'Upload failed. Allowed file types: ' . implode(',', $allowedfileExtensions);
-        // }
     }
     else
     {
