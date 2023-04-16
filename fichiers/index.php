@@ -58,6 +58,7 @@ function readDirWithBootstrap( $repertoire )
             <td>
                 <a class="btn btn-sm btn-secondary mb-2 mb-md-0" href="' . $link . '" target="_blank"> <i class="fas fa-eye"></i></a>
                 <a class="btn btn-sm btn-primary mb-2 mb-md-0" download href="' . $link . '"> <i class="fas fa-download"></i></a>
+                <!--
                 <button type="button" class="btn btn-sm btn-danger mb-2 mb-md-0" data-bs-toggle="modal" data-bs-target="#exampleModal' . $key . '">
                     <i class="fas fa-trash"></i>
                 </button>
@@ -73,11 +74,12 @@ function readDirWithBootstrap( $repertoire )
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <a class="btn btn-danger" href="delete.php?id=' . $link . '"> <i class="fas fa-trash"></i> Supprimer</a>
+                            <a href="supprimer_fichier.php?file=' . $link . '" class="btn btn-danger">Supprimer</a>
                         </div>
                         </div>
                     </div>
                 </div>
+                -->
             </td>
         </tr>
         
@@ -106,13 +108,16 @@ function readDirWithBootstrap( $repertoire )
 
 <div class="container">
     <h1 class="text-center mt-5 mb-2">
-        Mes documents
+        Mes fichiers
     </h1>
     <div class="row mb-2">
         <div class="col-lg-12">
-            <div class="d-flex justify-content-start">
-                <a href="telecharger_fichier.php" class="btn btn-primary"> <i class="fas fa-file-upload"></i> Téléverser un fichier </a>
-                <button id="deleteSelectedBtn" class="btn btn-danger"> <i class="fas fa-trash"></i> Supprimer les fichiers sélectionnés </button>
+            <div class="d-flex justify-content-between">
+                <a href="telecharger_fichier.php" class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Ajouter
+                </a>
+                <button id="deleteSelectedBtn" class="btn btn-danger"> <i class="fas fa-trash"></i></button>
             </div>
         </div>
     </div>
@@ -134,19 +139,23 @@ function readDirWithBootstrap( $repertoire )
         </div>
     </div>
 
+    <div id="alertContainer"></div>
+
     <div class="row">
         <div class="col-lg-12">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">
+                            <input type="checkbox" id="selectAll">
+                        </th>
                         <th scope="col">Nom du fichier</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
             <tbody>
                     <?php
-                    readDirWithBootstrap( './upload_files' );
+                    readDirWithBootstrap( 'upload_files' );
                     ?>
                 </tbody>
             </table>
@@ -159,6 +168,15 @@ function readDirWithBootstrap( $repertoire )
         crossorigin="anonymous"></script>
 
 <script>
+    // Sélectionnez tous les fichiers
+    document.getElementById('selectAll').addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('.file-checkbox');
+
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = this.checked;
+        }.bind(this));
+    });
+
     document.getElementById('deleteSelectedBtn').addEventListener('click', function () {
         const checkboxes = document.querySelectorAll('.file-checkbox:checked');
         const alertContainer = document.getElementById('alertContainer');
@@ -194,7 +212,11 @@ function readDirWithBootstrap( $repertoire )
                     fileUrl: fileUrl
                 })
             })
-                .then(response => response.json())
+                .then(response => response.text()) // Changez cette ligne pour lire le contenu de la réponse
+                .then(text => {
+                    console.log(text); // Affichez le contenu de la réponse
+                    return JSON.parse(text); // Analysez le contenu de la réponse en JSON
+                })
                 .then(data => {
                     if (data.success) {
                         // Supprimez la ligne correspondante du tableau
