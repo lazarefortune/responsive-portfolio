@@ -85,6 +85,8 @@ if( count($errors) > 0 ){
         <title>Lazare Fortune</title>
         <meta name="description" content="Je suis Lazare Fortune, développeur web junior">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google site verification -->
+        <meta name="google-site-verification" content="cVdQDiwamc06x0st9JWYRu-lqokoHUiT2rXI8yE03Vs" />
         <!-- CSS only -->
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
         <!-- JavaScript Bundle with Popper -->
